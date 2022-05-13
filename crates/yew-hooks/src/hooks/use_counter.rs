@@ -167,6 +167,7 @@ impl PartialEq for UseCounterHandle {
 ///     }
 /// }
 /// ```
+#[hook]
 pub fn use_counter(default: i32) -> UseCounterHandle {
     let handle = use_reducer(move || UseCounterReducer {
         value: default,

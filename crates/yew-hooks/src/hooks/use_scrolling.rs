@@ -26,6 +26,7 @@ use super::{use_event, use_unmount};
 ///     }
 /// }
 /// ```
+#[hook]
 pub fn use_scrolling(node: NodeRef) -> bool {
     let state = use_state(|| false);
     let timer = use_mut_ref(|| None);

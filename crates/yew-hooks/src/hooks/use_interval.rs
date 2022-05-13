@@ -32,6 +32,7 @@ use super::use_mut_latest;
 ///     }
 /// }
 /// ```
+#[hook]
 pub fn use_interval<Callback>(callback: Callback, millis: u32)
 where
     Callback: FnMut() + 'static,

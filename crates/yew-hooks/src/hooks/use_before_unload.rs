@@ -21,6 +21,7 @@ use super::use_event_with_window;
 ///     }
 /// }
 /// ```
+#[hook]
 pub fn use_before_unload(enabled: bool, msg: String) {
     use_event_with_window("beforeunload", move |e: BeforeUnloadEvent| {
         if !enabled {
@@ -34,5 +35,5 @@ pub fn use_before_unload(enabled: bool, msg: String) {
         // WebKit-derived browsers don't follow the spec for the dialog box.
         // We should return msg in the future for the event handler.
         // https://developer.mozilla.org/en-US/docs/Web/API/BeforeUnloadEvent
-    })
+    });
 }

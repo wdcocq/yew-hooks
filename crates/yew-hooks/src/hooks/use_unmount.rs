@@ -22,6 +22,7 @@ use super::{use_effect_once, use_mut_latest};
 ///     }
 /// }
 /// ```
+#[hook]
 pub fn use_unmount<Callback>(callback: Callback)
 where
     Callback: FnOnce() + 'static,

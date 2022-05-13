@@ -46,6 +46,7 @@ pub struct UseDragHandle {
 ///     }
 /// }
 /// ```
+#[hook]
 pub fn use_drag(node: NodeRef) -> UseDragHandle {
     use_drag_with_options(node, UseDragOptions::default())
 }
@@ -86,6 +87,7 @@ pub fn use_drag(node: NodeRef) -> UseDragHandle {
 ///     }
 /// }
 /// ```
+#[hook]
 pub fn use_drag_with_options(node: NodeRef, options: UseDragOptions) -> UseDragHandle {
     let dragging = use_state(|| false);
 

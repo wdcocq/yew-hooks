@@ -87,6 +87,7 @@ where
 ///     }
 /// }
 /// ```
+#[hook]
 pub fn use_raf_state<T, F>(init_fn: F) -> UseRafStateHandle<T>
 where
     T: 'static,

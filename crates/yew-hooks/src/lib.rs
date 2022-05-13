@@ -60,6 +60,8 @@
 //! ## Demo
 //!
 //! [Check out a live demo](https://jetli.github.io/yew-hooks/)
+#[macro_use(hook)]
+extern crate yew;
 
 mod hooks;
 pub(crate) mod web_sys_ext;

@@ -87,6 +87,7 @@ pub struct UseDropHandle {
 ///     }
 /// }
 /// ```
+#[hook]
 pub fn use_drop(node: NodeRef) -> UseDropHandle {
     use_drop_with_options(node, UseDropOptions::default())
 }
@@ -120,6 +121,7 @@ pub fn use_drop(node: NodeRef) -> UseDropHandle {
 ///     }
 /// }
 /// ```
+#[hook]
 pub fn use_drop_with_options(node: NodeRef, options: UseDropOptions) -> UseDropHandle {
     let over = use_state(|| false);
     let files = use_state(|| None);

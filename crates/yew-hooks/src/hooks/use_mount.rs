@@ -22,6 +22,7 @@ use super::use_effect_once;
 ///     }
 /// }
 /// ```
+#[hook]
 pub fn use_mount<Callback>(callback: Callback)
 where
     Callback: FnOnce() + 'static,

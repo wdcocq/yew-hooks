@@ -36,6 +36,7 @@ use super::{use_effect_once, use_effect_update, use_effect_update_with_deps, use
 ///     pub b: String,
 /// }
 /// ```
+#[hook]
 pub fn use_logger<T>(name: String, props: T)
 where
     T: Debug + 'static,
@@ -95,6 +96,7 @@ where
 ///     pub b: String,
 /// }
 /// ```
+#[hook]
 pub fn use_logger_eq<T>(name: String, props: T)
 where
     T: Debug + PartialEq + 'static,
